@@ -1,7 +1,6 @@
 spring:
   appliation:
     name: eureka-server
-
 server:
   port: 8070
 eureka:
