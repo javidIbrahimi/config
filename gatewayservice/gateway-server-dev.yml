@@ -14,7 +14,7 @@ eureka:
 
 spring:
   cloud:
-  loadbalancer.ribbon.enabled: false
+    loadbalancer.ribbon.enabled: false
     gateway:
 #      discovery.locator:
 #        enable: true
@@ -23,9 +23,9 @@ spring:
         - id: organization-service
           uri: lb://organization-service
           predicates:
-          - Path=/organization/**
+            - Path=/organization/**
           filters:
-          - RewritePath=/organization/(?<path>.*, /$\{path}
+            - RewritePath=/organization/(?<path>.*, /$\{path}
 
   application:
     name: gateway-server
