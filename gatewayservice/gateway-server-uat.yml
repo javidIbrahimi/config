@@ -14,10 +14,11 @@ eureka:
 
 spring:
   cloud:
+  loadbalancer.ribbon.enabled: false
     gateway:
-      discovery.locator:
-        enable: true
-        lowerCaseServiceId: true
+      #      discovery.locator:
+      #        enable: true
+      #        lowerCaseServiceId: true
       routes:
         - id: organization-service
           uri: lb://organization-service

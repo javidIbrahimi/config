@@ -11,19 +11,21 @@ eureka:
       defaultZone: http://eurekaserver:8070/eureka/
 
 
+
 spring:
   cloud:
+  loadbalancer.ribbon.enabled: false
     gateway:
-      discovery.locator:
-        enable: true
-        lowerCaseServiceId: true
+#      discovery.locator:
+#        enable: true
+#        lowerCaseServiceId: true
       routes:
         - id: organization-service
           uri: lb://organization-service
           predicates:
-            - Path=/organization/**
+          - Path=/organization/**
           filters:
-            - RewritePath=/organization/(?<path>.*, /$\{path}
+          - RewritePath=/organization/(?<path>.*, /$\{path}
 
   application:
     name: gateway-server
