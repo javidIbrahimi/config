@@ -19,13 +19,13 @@ spring:
       discovery.locator:
         enabled: true
         lowerCaseServiceId: true
-#      routes:
-#        - id: organization-service
-#          uri: lb://organization-service
-#          predicates:
-#            - Path=/organization/**
-#          filters:
-#            - RewritePath=/organization/(?<path>.*, /$\{path}
+      routes:
+        - id: organization-service
+          uri: lb://organization-service
+          predicates:
+            - Path=/organization/**
+          filters:
+            - RewritePath=/organization/(?<path>.*), /$\{path}
 
   application:
     name: gateway-server
