@@ -18,7 +18,7 @@ spring:
     gateway:
       discovery.locator:
         enable: true
-        lowerCaseServiceId: true
+        lower-case-service-id: true
 #      routes:
 #        - id: organization-service
 #          uri: lb://organization-service
