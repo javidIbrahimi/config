@@ -17,7 +17,7 @@ spring:
     loadbalancer.ribbon.enabled: false
     gateway:
       discovery.locator:
-        enable: true
+        enabled: true
         lower-case-service-id: true
 #      routes:
 #        - id: organization-service
