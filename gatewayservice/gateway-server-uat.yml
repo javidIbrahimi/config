@@ -29,3 +29,4 @@ spring:
 
   application:
     name: gateway-server
+
