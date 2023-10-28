@@ -1,6 +1,9 @@
 spring:
   appliation:
     name: eureka-server
+  cloud:
+    config:
+      uri: http://configserver:8071
 server:
   port: 8070
 eureka:
